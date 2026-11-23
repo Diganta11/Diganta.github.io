@@ -5,691 +5,535 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Academic and professional portfolio of Diganta Das, Project Engineer at FlexNFab Lab, IIT Kharagpur.">
+    <meta name="description" content="Personal portfolio of Diganta Das, Project Engineer in Electronics and Embedded Systems at FlexNFab Lab, IIT Kharagpur.">
 
-    <meta name="theme-color" content="#ffffff">
+    <title>Diganta Das | Personal Portfolio</title>
 
-    <title>Diganta Das | Academic & Professional Portfolio</title>
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="header">
-    <nav class="navbar container">
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container">
 
-        <a href="#home" class="logo">Diganta Das<span>.</span></a>
+            <a href="#home" class="logo">Diganta<span>.</span></a>
 
-        <input type="checkbox" id="menu-toggle">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
 
-        <label for="menu-toggle" class="menu-button" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        </nav>
+    </header>
 
-    </nav>
-</header>
+    <main>
 
+        <!-- Hero Section -->
+        <section class="hero container" id="home">
 
-<main>
+            <div class="hero-content">
 
-    <!-- Introduction -->
+                <p class="hero-greeting">HELLO, I'M</p>
 
-    <section class="hero container" id="home">
+                <h1>Diganta Das</h1>
 
-        <div class="hero-content">
+                <h2>
+                    Project Engineer
+                    <span>Electronics & Embedded Systems</span>
+                </h2>
 
-            <p class="intro-label">PERSONAL ACADEMIC & PROFESSIONAL PORTFOLIO</p>
-
-            <h1>Diganta Das</h1>
-
-            <h2>
-                Project Engineer
-                <span>Electronics & Embedded Systems</span>
-            </h2>
-
-            <p class="hero-description">
-                Welcome to my personal website. I am an engineer with
-                an academic background in Electronics and Communication
-                Engineering and postgraduate training in Computer Science
-                and Data Analytics.
-
-                I am currently working as a Project Engineer at
-                FlexNFab Lab, IIT Kharagpur.
-            </p>
-
-            <p class="hero-description secondary-description">
-                My interests include electronics, embedded systems,
-                hardware development, research and experimental work,
-                and the application of intelligent technologies.
-            </p>
-
-            <div class="hero-links">
-                <a href="#about" class="primary-link">More About Me ↓</a>
-                <a href="mailto:digantad1120@gmail.com" class="text-link">Get in Touch ↗</a>
-            </div>
-
-            <div class="affiliation">
-                <span class="affiliation-dot"></span>
-                FlexNFab Lab, Indian Institute of Technology Kharagpur
-            </div>
-
-        </div>
-
-
-        <div class="hero-image-area">
-
-            <!-- Replace placeholder with your photograph -->
-
-            <div class="profile-image">
-                <div class="image-placeholder">
-                    DD
-                </div>
-            </div>
-
-            <p class="image-caption">
-                Diganta Das · IIT Kharagpur
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- About -->
-
-    <section class="section container" id="about">
-
-        <div class="section-heading">
-            <span class="section-number">01</span>
-            <div>
-                <p class="section-label">INTRODUCTION</p>
-                <h2>About Me</h2>
-            </div>
-        </div>
-
-        <div class="about-content">
-
-            <div class="about-text">
-
-                <p>
-                    I am an engineer with a background in Electronics
-                    and Communication Engineering and a postgraduate
-                    degree in Computer Science and Engineering,
-                    specializing in Data Analytics.
+                <p class="hero-description">
+                    I am an engineer with an academic background in Electronics
+                    and Communication Engineering and Computer Science & Data
+                    Analytics. Currently, I work at FlexNFab Lab, IIT Kharagpur,
+                    with interests in electronics, embedded technologies,
+                    hardware development and intelligent systems.
                 </p>
 
-                <p>
-                    My academic journey has provided me with exposure
-                    to electronics, embedded systems, programming,
-                    machine learning and data analytics through
-                    coursework and academic projects.
-                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Explore My Work <i class="fas fa-arrow-right"></i>
+                    </a>
 
-                <p>
-                    Currently, I am working as a Project Engineer in
-                    Electronics and Embedded Systems at FlexNFab Lab,
-                    IIT Kharagpur. My work broadly involves research
-                    and development, experimental activities and
-                    hardware prototyping.
-                </p>
+                    <a href="#contact" class="btn btn-outline">
+                        Get in Touch
+                    </a>
+                </div>
 
-                <p>
-                    I am interested in exploring the practical
-                    applications of electronics and embedded
-                    technologies, while continuing to develop my
-                    technical knowledge and engineering skills.
-                </p>
+                <div class="hero-details">
+                    <span>
+                        <i class="fas fa-location-dot"></i>
+                        IIT Kharagpur, India
+                    </span>
+
+                    <span>
+                        <i class="fas fa-briefcase"></i>
+                        FlexNFab Lab
+                    </span>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/diganta-das-8b15391ab"
+                       target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://github.com/Diganta11"
+                       target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="mailto:digantad1120@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
 
             </div>
 
-            <aside class="profile-details">
+            <div class="hero-image-wrapper">
 
-                <h3>At a Glance</h3>
+                <div class="image-decoration"></div>
 
-                <div class="detail-item">
-                    <span>Current Position</span>
-                    <strong>Project Engineer</strong>
+                <!-- Replace with your actual photograph -->
+                <div class="hero-image">
+                    <img src="images/profile.jpg"
+                         alt="Diganta Das"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                    <div class="image-fallback">
+                        <i class="fas fa-user"></i>
+                    </div>
                 </div>
 
-                <div class="detail-item">
-                    <span>Organization</span>
-                    <strong>IIT Kharagpur</strong>
+                <div class="image-caption">
+                    <span class="caption-line"></span>
+                    <div>
+                        <h3>Diganta Das</h3>
+                        <p>Engineer · Technology Enthusiast</p>
+                    </div>
                 </div>
 
-                <div class="detail-item">
-                    <span>Postgraduate Degree</span>
-                    <strong>M.Tech · CSE</strong>
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">INTRODUCTION</p>
+                    <h2>About Me</h2>
+                    <p class="section-subtitle">
+                        A little about my academic background, professional
+                        journey and interests.
+                    </p>
                 </div>
 
-                <div class="detail-item">
-                    <span>Undergraduate Degree</span>
-                    <strong>B.Tech · ECE</strong>
+                <div class="about-layout">
+
+                    <div class="about-text">
+
+                        <p>
+                            I am Diganta Das, an engineer with a background in
+                            Electronics and Communication Engineering and
+                            postgraduate training in Computer Science and
+                            Data Analytics.
+                        </p>
+
+                        <p>
+                            My academic journey has allowed me to explore
+                            different areas of technology, including embedded
+                            systems, electronics, machine learning, computer
+                            vision and data analytics.
+                        </p>
+
+                        <p>
+                            I currently work as a Project Engineer in
+                            Electronics and Embedded Systems at FlexNFab Lab,
+                            IIT Kharagpur. My work involves electronics and
+                            embedded systems development, research and
+                            experimental work, and hardware prototyping.
+                        </p>
+
+                        <p>
+                            I enjoy learning new technologies, working on
+                            practical problems and exploring how hardware
+                            and software can work together to build useful
+                            solutions.
+                        </p>
+
+                    </div>
+
+                    <div class="about-info">
+
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </span>
+                            <div>
+                                <h3>Education</h3>
+                                <p>M.Tech in Computer Science & Engineering</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <i class="fas fa-microchip"></i>
+                            </span>
+                            <div>
+                                <h3>Professional Area</h3>
+                                <p>Electronics & Embedded Systems</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <i class="fas fa-university"></i>
+                            </span>
+                            <div>
+                                <h3>Current Institution</h3>
+                                <p>IIT Kharagpur</p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
-            </aside>
+            </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- Education Section -->
+        <section class="section section-alt" id="education">
 
+            <div class="container">
 
-    <!-- Education -->
-
-    <section class="section section-muted" id="education">
-
-        <div class="container">
-
-            <div class="section-heading">
-                <span class="section-number">02</span>
-                <div>
+                <div class="section-heading">
                     <p class="section-label">ACADEMIC BACKGROUND</p>
                     <h2>Education</h2>
-                </div>
-            </div>
-
-
-            <div class="education-list">
-
-                <article class="education-item">
-
-                    <div class="education-year">
-                        2023 – 2025
-                    </div>
-
-                    <div class="education-details">
-
-                        <h3>
-                            Master of Technology (M.Tech)
-                        </h3>
-
-                        <h4>
-                            Computer Science and Engineering
-                        </h4>
-
-                        <p>
-                            Specialization: Data Analytics
-                        </p>
-
-                        <span class="institution">
-                            KIIT University
-                        </span>
-
-                    </div>
-
-                    <div class="education-score">
-                        <span>CGPA</span>
-                        <strong>7.79</strong>
-                    </div>
-
-                </article>
-
-
-                <article class="education-item">
-
-                    <div class="education-year">
-                        2019 – 2023
-                    </div>
-
-                    <div class="education-details">
-
-                        <h3>
-                            Bachelor of Technology (B.Tech)
-                        </h3>
-
-                        <h4>
-                            Electronics and Communication Engineering
-                        </h4>
-
-                        <p>
-                            Undergraduate Degree
-                        </p>
-
-                        <span class="institution">
-                            Adamas University
-                        </span>
-
-                    </div>
-
-                    <div class="education-score">
-                        <span>CGPA</span>
-                        <strong>9.24</strong>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Experience -->
-
-    <section class="section container" id="experience">
-
-        <div class="section-heading">
-            <span class="section-number">03</span>
-            <div>
-                <p class="section-label">PROFESSIONAL BACKGROUND</p>
-                <h2>Experience</h2>
-            </div>
-        </div>
-
-
-        <div class="experience-list">
-
-            <article class="experience-item">
-
-                <div class="experience-date">
-                    <span>NOV 2026 – PRESENT</span>
-                    <span class="current-dot"></span>
-                </div>
-
-                <div class="experience-details">
-
-                    <h3>Project Engineer</h3>
-
-                    <h4>
-                        FlexNFab Lab · IIT Kharagpur
-                    </h4>
-
-                    <p>
-                        Working in the area of Electronics and Embedded
-                        Systems, with a focus on research, experimental
-                        development and hardware prototyping.
+                    <p class="section-subtitle">
+                        My academic journey and qualifications.
                     </p>
+                </div>
+
+                <div class="education-list">
+
+                    <article class="education-card">
+
+                        <div class="education-year">2023 — 2025</div>
+
+                        <div class="education-content">
+                            <h3>Master of Technology (M.Tech)</h3>
+
+                            <h4>Computer Science and Engineering</h4>
+
+                            <p class="education-specialization">
+                                Specialization: Data Analytics
+                            </p>
+
+                            <p class="institution">
+                                <i class="fas fa-university"></i>
+                                KIIT University
+                            </p>
+                        </div>
+
+                        <div class="education-score">
+                            <span>CGPA</span>
+                            <strong>7.79</strong>
+                        </div>
+
+                    </article>
+
+                    <article class="education-card">
+
+                        <div class="education-year">2019 — 2023</div>
+
+                        <div class="education-content">
+                            <h3>Bachelor of Technology (B.Tech)</h3>
+
+                            <h4>Electronics and Communication Engineering</h4>
+
+                            <p class="education-specialization">
+                                Undergraduate Degree
+                            </p>
+
+                            <p class="institution">
+                                <i class="fas fa-university"></i>
+                                Adamas University
+                            </p>
+                        </div>
+
+                        <div class="education-score">
+                            <span>CGPA</span>
+                            <strong>9.24</strong>
+                        </div>
+
+                    </article>
 
                 </div>
 
-            </article>
+            </div>
 
+        </section>
 
-            <article class="experience-item">
+        <!-- Experience Section -->
+        <section class="section" id="experience">
 
-                <div class="experience-date">
-                    <span>OCT – DEC 2022</span>
-                </div>
+            <div class="container">
 
-                <div class="experience-details">
-
-                    <h3>Product Incubation Intern</h3>
-
-                    <h4>GAPCRUD Pvt. Ltd.</h4>
-
-                    <p>
-                        Internship experience in a product incubation
-                        environment, providing early exposure to
-                        professional product development.
+                <div class="section-heading">
+                    <p class="section-label">PROFESSIONAL JOURNEY</p>
+                    <h2>Experience</h2>
+                    <p class="section-subtitle">
+                        My professional experience and current role.
                     </p>
+                </div>
+
+                <div class="experience-list">
+
+                    <article class="experience-card">
+
+                        <div class="experience-marker"></div>
+
+                        <div class="experience-content">
+
+                            <div class="experience-top">
+                                <span class="experience-date">
+                                    NOVEMBER 2026 — PRESENT
+                                </span>
+
+                                <span class="current-badge">Current</span>
+                            </div>
+
+                            <h3>Project Engineer</h3>
+
+                            <h4>FlexNFab Lab · IIT Kharagpur</h4>
+
+                            <p>
+                                Working in the area of Electronics and
+                                Embedded Systems, with involvement in
+                                research and experimental development,
+                                hardware prototyping and electronics
+                                development.
+                            </p>
+
+                            <div class="tag-list">
+                                <span>Electronics</span>
+                                <span>Embedded Systems</span>
+                                <span>Hardware Development</span>
+                                <span>R&D</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="experience-card">
+
+                        <div class="experience-marker"></div>
+
+                        <div class="experience-content">
+
+                            <div class="experience-top">
+                                <span class="experience-date">
+                                    OCTOBER 2022 — DECEMBER 2022
+                                </span>
+                            </div>
+
+                            <h3>Product Incubation Intern</h3>
+
+                            <h4>GAPCRUD Pvt. Ltd.</h4>
+
+                            <p>
+                                Completed a product incubation internship,
+                                gaining early professional exposure to a
+                                product development environment.
+                            </p>
+
+                            <div class="tag-list">
+                                <span>Product Incubation</span>
+                            </div>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
-            </article>
+            </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- Projects Section -->
+        <section class="section section-alt" id="projects">
 
+            <div class="container">
 
-    <!-- Projects -->
-
-    <section class="section section-muted" id="projects">
-
-        <div class="container">
-
-            <div class="section-heading">
-                <span class="section-number">04</span>
-                <div>
+                <div class="section-heading">
                     <p class="section-label">ACADEMIC & TECHNICAL WORK</p>
-                    <h2>Projects</h2>
+                    <h2>Selected Projects</h2>
+                    <p class="section-subtitle">
+                        A selection of projects from my academic and
+                        technical journey.
+                    </p>
                 </div>
-            </div>
 
-            <p class="section-intro">
-                A selection of academic and technical projects
-                undertaken during my academic journey.
-            </p>
+                <div class="projects-grid">
 
-
-            <div class="projects-list">
-
-                <article class="project-item">
-                    <span class="project-index">01</span>
-                    <div>
+                    <article class="project-card">
+                        <span class="project-category">HEALTHCARE · DEEP LEARNING</span>
                         <h3>ECG Arrhythmia Classification</h3>
                         <p>
-                            Academic work exploring CNN-LSTM architectures
-                            for the classification of ECG signals.
+                            Explored CNN-LSTM architectures for the
+                            classification of ECG signals.
                         </p>
-                        <div class="project-tags">
+                        <div class="tag-list">
                             <span>Python</span>
                             <span>CNN-LSTM</span>
                             <span>Deep Learning</span>
                         </div>
-                    </div>
-                    <span class="project-category">Healthcare</span>
-                </article>
+                    </article>
 
-
-                <article class="project-item">
-                    <span class="project-index">02</span>
-                    <div>
+                    <article class="project-card">
+                        <span class="project-category">COMPUTER VISION</span>
                         <h3>Dermavision</h3>
                         <p>
                             Image classification project using the
-                            MobileNetV2 architecture.
+                            MobileNetV2 deep learning architecture.
                         </p>
-                        <div class="project-tags">
+                        <div class="tag-list">
                             <span>Python</span>
                             <span>MobileNetV2</span>
                             <span>Computer Vision</span>
                         </div>
-                    </div>
-                    <span class="project-category">Computer Vision</span>
-                </article>
+                    </article>
 
-
-                <article class="project-item">
-                    <span class="project-index">03</span>
-                    <div>
+                    <article class="project-card">
+                        <span class="project-category">EMBEDDED SYSTEMS</span>
                         <h3>Smart Water Pump Control</h3>
                         <p>
-                            Embedded systems project focused on smart
-                            water pump control and backflow detection.
+                            Developed an embedded project focused on
+                            smart water pump control and backflow detection.
                         </p>
-                        <div class="project-tags">
+                        <div class="tag-list">
                             <span>Arduino</span>
                             <span>Sensors</span>
                             <span>Embedded Systems</span>
                         </div>
-                    </div>
-                    <span class="project-category">Embedded Systems</span>
-                </article>
+                    </article>
 
-
-                <article class="project-item">
-                    <span class="project-index">04</span>
-                    <div>
+                    <article class="project-card">
+                        <span class="project-category">ROBOTICS</span>
                         <h3>Hand Gesture Controlled Bot</h3>
                         <p>
-                            Robotics project exploring gesture-based
-                            control of a mobile robot.
+                            Explored gesture-based control of a mobile
+                            robot through an electronics and robotics project.
                         </p>
-                        <div class="project-tags">
+                        <div class="tag-list">
                             <span>Robotics</span>
                             <span>Electronics</span>
                             <span>Control Systems</span>
                         </div>
-                    </div>
-                    <span class="project-category">Robotics</span>
-                </article>
+                    </article>
 
-
-                <article class="project-item">
-                    <span class="project-index">05</span>
-                    <div>
+                    <article class="project-card">
+                        <span class="project-category">COMPUTER VISION</span>
                         <h3>Driver Drowsiness Detection</h3>
                         <p>
                             Academic project exploring computer vision
                             techniques for driver drowsiness detection.
                         </p>
-                        <div class="project-tags">
+                        <div class="tag-list">
                             <span>Python</span>
                             <span>Computer Vision</span>
                         </div>
-                    </div>
-                    <span class="project-category">Computer Vision</span>
-                </article>
+                    </article>
 
-
-                <article class="project-item">
-                    <span class="project-index">06</span>
-                    <div>
+                    <article class="project-card">
+                        <span class="project-category">HEALTH MONITORING</span>
                         <h3>Embedded Health Monitoring System</h3>
                         <p>
-                            Embedded systems project focused on
+                            An embedded systems project focused on
                             health-related monitoring.
                         </p>
-                        <div class="project-tags">
+                        <div class="tag-list">
                             <span>Embedded Systems</span>
                             <span>Sensors</span>
                         </div>
-                    </div>
-                    <span class="project-category">Healthcare</span>
-                </article>
+                    </article>
 
-
-                <article class="project-item">
-                    <span class="project-index">07</span>
-                    <div>
+                    <article class="project-card">
+                        <span class="project-category">DATA ANALYTICS</span>
                         <h3>Predictive Sports Analysis</h3>
                         <p>
-                            Data analytics project exploring predictive
-                            analysis in the sports domain.
+                            Explored predictive analysis techniques
+                            in the sports domain.
                         </p>
-                        <div class="project-tags">
+                        <div class="tag-list">
                             <span>Python</span>
                             <span>Data Analytics</span>
                         </div>
-                    </div>
-                    <span class="project-category">Data Analytics</span>
-                </article>
+                    </article>
 
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Skills -->
-
-    <section class="section container" id="skills">
-
-        <div class="section-heading">
-            <span class="section-number">05</span>
-            <div>
-                <p class="section-label">TECHNICAL KNOWLEDGE</p>
-                <h2>Skills & Technologies</h2>
-            </div>
-        </div>
-
-
-        <div class="skills-list">
-
-            <div class="skill-group">
-                <h3>Electronics & Embedded Systems</h3>
-                <p>
-                    Arduino, Microcontrollers, Embedded C,
-                    Sensor Interfacing, Circuit Design,
-                    Hardware Debugging
-                </p>
-            </div>
-
-            <div class="skill-group">
-                <h3>Programming Languages</h3>
-                <p>C, Python, SQL</p>
-            </div>
-
-            <div class="skill-group">
-                <h3>Data Analytics & Machine Learning</h3>
-                <p>
-                    Power BI, Tableau, Excel, Machine Learning
-                </p>
-            </div>
-
-            <div class="skill-group">
-                <h3>Development Tools & Platforms</h3>
-                <p>
-                    Git, GitHub, VS Code, Jupyter,
-                    Google Colab
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Activities -->
-
-    <section class="section section-muted" id="activities">
-
-        <div class="container">
-
-            <div class="section-heading">
-                <span class="section-number">06</span>
-                <div>
-                    <p class="section-label">ADDITIONAL ACTIVITIES</p>
-                    <h2>Activities & Achievements</h2>
                 </div>
-            </div>
-
-
-            <div class="activities-list">
-
-                <article>
-                    <span class="activity-date">
-                        JAN 2021 – MAR 2023
-                    </span>
-
-                    <div>
-                        <h3>Student Coordinator</h3>
-                        <p>Adamas Robotics and AI Club</p>
-                        <small>Club coordination and student activities</small>
-                    </div>
-                </article>
-
-
-                <article>
-                    <span class="activity-date">2021</span>
-
-                    <div>
-                        <h3>Third Prize – Aptithon</h3>
-                        <p>Recognition in the Aptithon competition.</p>
-                    </div>
-                </article>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- Skills Section -->
+        <section class="section" id="skills">
 
+            <div class="container">
 
-    <!-- Interests -->
+                <div class="section-heading">
+                    <p class="section-label">TECHNICAL EXPERTISE</p>
+                    <h2>Skills & Technologies</h2>
+                    <p class="section-subtitle">
+                        Technologies and tools I have worked with.
+                    </p>
+                </div>
 
-    <section class="section container" id="interests">
+                <div class="skills-grid">
 
-        <div class="section-heading">
-            <span class="section-number">07</span>
-            <div>
-                <p class="section-label">PERSONAL INTERESTS</p>
-                <h2>Beyond Academics</h2>
-            </div>
-        </div>
+                    <article class="skill-card">
+                        <div class="skill-heading">
+                            <i class="fas fa-microchip"></i>
+                            <h3>Electronics & Embedded Systems</h3>
+                        </div>
+                        <div class="tag-list">
+                            <span>Arduino</span>
+                            <span>Microcontrollers</span>
+                            <span>Embedded C</span>
+                            <span>Sensor Interfacing</span>
+                            <span>Circuit Design</span>
+                            <span>Hardware Debugging</span>
+                        </div>
+                    </article>
 
-        <div class="interests-list">
-            <span>Photography</span>
-            <span>Travelling</span>
-            <span>Reading</span>
-            <span>Cricket</span>
-            <span>Exploring Technology</span>
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-
-    <section class="contact-section" id="contact">
-
-        <div class="container contact-inner">
-
-            <div>
-                <p class="section-label">CONTACT INFORMATION</p>
-                <h2>Get in Touch</h2>
-
-                <p>
-                    For professional communication, academic
-                    discussions or other enquiries, please feel
-                    free to contact me.
-                </p>
-            </div>
-
-            <div class="contact-details">
-
-                <a href="mailto:digantad1120@gmail.com">
-                    <span>Email</span>
-                    digantad1120@gmail.com ↗
-                </a>
-
-                <a href="https://linkedin.com/in/diganta-das-8b15391ab"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <span>LinkedIn</span>
-                    View LinkedIn Profile ↗
-                </a>
-
-                <a href="https://github.com/Diganta11"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <span>GitHub</span>
-                    View GitHub Profile ↗
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer class="footer container">
-
-    <a href="#home" class="logo">Diganta Das<span>.</span></a>
-
-    <p>
-        Personal Academic & Professional Portfolio
-    </p>
-
-    <p>
-        © 2026 Diganta Das
-    </p>
-
-</footer>
-
-
-<script>
-    // Close the mobile menu after selecting a navigation link
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('menu-toggle').checked = false;
-        });
-    });
-</script>
-
-</body>
-</html>
+                    <article class="skill-card">
+    
