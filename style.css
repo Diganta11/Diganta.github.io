@@ -1,9 +1,17 @@
 
-/* Basic page settings */
+/* ========================================
+   GLOBAL SETTINGS
+======================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -13,22 +21,24 @@ body {
     line-height: 1.6;
 }
 
-/* Main heading */
-h1 {
-    color: #142d4e;
-    font-size: 42px;
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 30px;
+    border-top: 1px solid #e8ebf0;
 }
 
-h2 {
-    color: #24476b;
-    font-size: 22px;
-    font-weight: normal;
-}
 
-/* Navigation bar */
+/* ========================================
+   NAVIGATION
+======================================== */
+
 header {
     background-color: #ffffff;
     border-bottom: 1px solid #e8ebf0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .navbar {
@@ -54,7 +64,7 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 28px;
+    gap: 25px;
 }
 
 .nav-links a {
@@ -68,7 +78,11 @@ header {
     color: #24476b;
 }
 
-/* Homepage introduction */
+
+/* ========================================
+   HERO / HOME SECTION
+======================================== */
+
 .hero {
     max-width: 1100px;
     min-height: 75vh;
@@ -89,6 +103,7 @@ header {
 }
 
 .hero h1 {
+    color: #142d4e;
     font-size: 54px;
     margin-bottom: 12px;
 }
@@ -98,16 +113,24 @@ header {
 }
 
 .hero h2 {
+    color: #24476b;
     font-size: 24px;
+    font-weight: normal;
     margin-bottom: 20px;
 }
 
 .hero-description {
     max-width: 620px;
+    color: #555555;
+    font-size: 16px;
     margin-bottom: 30px;
 }
 
-/* Buttons */
+
+/* ========================================
+   BUTTONS
+======================================== */
+
 .hero-buttons {
     display: flex;
     gap: 15px;
@@ -126,7 +149,7 @@ header {
 
 .btn-primary {
     background-color: #24476b;
-    color: white;
+    color: #ffffff;
 }
 
 .btn-primary:hover {
@@ -140,16 +163,13 @@ header {
 
 .btn-outline:hover {
     background-color: #24476b;
-    color: white;
+    color: #ffffff;
 }
 
-/* About section */
-.about {
-    max-width: 1100px;
-    margin: auto;
-    padding: 90px 30px;
-    border-top: 1px solid #e8ebf0;
-}
+
+/* ========================================
+   SECTION HEADINGS
+======================================== */
 
 .section-heading {
     margin-bottom: 35px;
@@ -160,6 +180,11 @@ header {
     font-size: 34px;
     font-weight: bold;
 }
+
+
+/* ========================================
+   ABOUT SECTION
+======================================== */
 
 .about-content {
     max-width: 780px;
@@ -173,19 +198,9 @@ header {
 }
 
 
-/* Paragraphs */
-p {
-    color: #555555;
-    font-size: 16px;
-}
-
-/* Education section */
-.education {
-    max-width: 1100px;
-    margin: auto;
-    padding: 90px 30px;
-    border-top: 1px solid #e8ebf0;
-}
+/* ========================================
+   EDUCATION SECTION
+======================================== */
 
 .education-container {
     display: grid;
@@ -230,14 +245,158 @@ p {
     color: #555555;
     margin-bottom: 8px;
 }
-/* Mobile layout */
-@media (max-width: 700px) {
-    .education-container {
-        grid-template-columns: 1fr;
-    }
-}
+
 .grade {
     color: #24476b;
     font-weight: bold;
     font-size: 14px;
+}
+
+
+/* ========================================
+   EXPERIENCE SECTION
+======================================== */
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.experience-card {
+    background-color: #ffffff;
+    border: 1px solid #e8ebf0;
+    border-left: 4px solid #24476b;
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(20, 45, 78, 0.08);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.experience-card h3 {
+    color: #142d4e;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.experience-card h4 {
+    color: #4169a1;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.experience-period {
+    color: #4169a1;
+    font-size: 13px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.experience-description {
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.experience-tags span {
+    background-color: #eef2f8;
+    color: #24476b;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   PROJECTS & CONTACT PLACEHOLDERS
+======================================== */
+
+.placeholder-section p {
+    color: #555555;
+    font-size: 16px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: #142d4e;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 80px 25px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .section {
+        padding: 65px 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .experience-period {
+        white-space: normal;
+    }
+
 }
