@@ -1103,3 +1103,190 @@ h1, h2, h3, h4 {
     }
 
 }
+
+/* =========================================
+   NEW VISUAL THEME
+   Soft Blue / Lavender / Teal
+========================================= */
+
+:root {
+    --primary: #243B53;
+    --primary-dark: #172B40;
+    --accent: #397F83;
+    --accent-light: #E2EFED;
+
+    --background: #EAF0F5;
+    --background-alt: #DFE8F0;
+    --surface: #F7F9FB;
+
+    --text: #26394B;
+    --muted: #607386;
+    --border: rgba(36, 59, 83, 0.12);
+
+    --shadow: 0 8px 28px rgba(36, 59, 83, 0.08);
+}
+
+/* Main page background */
+body {
+    background:
+        radial-gradient(
+            circle at 8% 5%,
+            rgba(194, 194, 224, 0.42),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 95% 25%,
+            rgba(175, 214, 208, 0.40),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #EAF0F5 0%,
+            #E4EBF2 50%,
+            #E9F0EE 100%
+        );
+
+    background-attachment: fixed;
+}
+
+/* Navigation */
+.header {
+    background: rgba(234, 240, 245, 0.88);
+    border-bottom: 1px solid rgba(36, 59, 83, 0.12);
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(
+        125deg,
+        rgba(255, 255, 255, 0.62),
+        rgba(222, 233, 241, 0.55)
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-top: 28px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+/* Alternate sections */
+.section-alt {
+    background: rgba(210, 223, 235, 0.55);
+    border-top: 1px solid rgba(255,255,255,0.45);
+    border-bottom: 1px solid rgba(255,255,255,0.45);
+}
+
+/* Cards */
+.education-card,
+.experience-content,
+.project-card,
+.skill-card,
+.activity-card,
+.about-info {
+    background: rgba(249, 251, 253, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 7px 22px rgba(36, 59, 83, 0.055);
+}
+
+/* About information panel */
+.about-info {
+    background: rgba(249, 251, 253, 0.75);
+}
+
+/* Project cards */
+.project-card {
+    background: linear-gradient(
+        145deg,
+        rgba(250, 252, 254, 0.95),
+        rgba(233, 240, 246, 0.88)
+    );
+}
+
+/* Skill tags */
+.tag-list span {
+    background: #E4EBF2;
+    border-color: rgba(36, 59, 83, 0.08);
+}
+
+/* Personal interests */
+.interest-list span {
+    background: rgba(249, 251, 253, 0.8);
+}
+
+/* Accent icons */
+.info-icon,
+.skill-heading > i,
+.activity-card > i {
+    background: #DCEBE9;
+    color: #397F83;
+}
+
+/* Image decoration */
+.image-decoration {
+    border-color: #397F83;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #29465E;
+    border-color: #29465E;
+}
+
+.btn-primary:hover {
+    background: #397F83;
+    border-color: #397F83;
+}
+
+/* Contact section */
+.contact-section {
+    background: linear-gradient(
+        120deg,
+        #1D344B,
+        #294C60 65%,
+        #315F65
+    );
+}
+
+/* Footer */
+.footer {
+    background: #172B40;
+}
+
+/* Smooth hover effects */
+.project-card,
+.education-card,
+.skill-card,
+.activity-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.project-card:hover,
+.education-card:hover,
+.skill-card:hover,
+.activity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(36, 59, 83, 0.10);
+}
+
+/* Mobile background */
+@media (max-width: 720px) {
+    body {
+        background: linear-gradient(
+            145deg,
+            #EAF0F5,
+            #E4EBF2 65%,
+            #E9F0EE
+        );
+        background-attachment: scroll;
+    }
+
+    .hero {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
