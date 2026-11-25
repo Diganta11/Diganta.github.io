@@ -135,21 +135,27 @@ h1, h2, h3, h4 {
 
 /* ---------- Hero Section ---------- */
 
-/* Better proportioned hero panel */
+/* ---------- Hero Section ---------- */
+
 .hero {
-    width: min(1500px, calc(100% - 64px));
-    max-width: 1500px;
+    width: min(var(--container), calc(100% - 48px));
+    max-width: var(--container);
+    min-height: 620px;
     margin: 32px auto 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+    align-items: center;
+    gap: 55px;
+
+    padding: 65px 55px;
 
     background: rgba(255, 255, 255, 0.16);
     border: 1px solid rgba(255, 255, 255, 0.48);
-    border-radius: 32px;
+    border-radius: 28px;
 
     box-shadow: 0 12px 40px rgba(24, 41, 60, 0.04);
     backdrop-filter: blur(8px);
-
-    padding-left: clamp(28px, 5vw, 75px);
-    padding-right: clamp(28px, 5vw, 75px);
 }
 
 .hero-content {
@@ -1110,11 +1116,11 @@ h1, h2, h3, h4 {
     }
 
 }
-/* =========================================
-   FINAL THEME
-   Lavender / Sky Blue / Mint
-   Inspired by the reference screenshot
-========================================= */
+
+
+/* =====================================================
+   FINAL COLOUR THEME — LAVENDER / SKY BLUE / MINT
+===================================================== */
 
 :root {
     --primary: #18293C;
@@ -1123,18 +1129,19 @@ h1, h2, h3, h4 {
     --accent-light: #E1F0FF;
 
     --background: #BBD9EB;
-    --background-alt: #C5E7E9;
+    --background-alt: rgba(255, 255, 255, 0.20);
     --surface: rgba(255, 255, 255, 0.30);
 
     --text: #18293C;
     --muted: #526A80;
     --border: rgba(255, 255, 255, 0.45);
-
     --shadow: 0 8px 30px rgba(24, 41, 60, 0.08);
 }
 
-/* Full-page gradient */
+/* Gradient background and a local stacking layer for the bubbles */
 body {
+    min-height: 100vh;
+    isolation: isolate;
     background:
         linear-gradient(
             115deg,
@@ -1142,109 +1149,69 @@ body {
             #A5C9E7 48%,
             #BDF7E8 100%
         );
-
     background-attachment: fixed;
 }
 
-/* Navigation */
-.header {
-    background: rgba(255, 255, 255, 0.18);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(12px);
-}
-
-/* Hero section */
-.hero {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.42);
-    box-shadow: none;
-}
-
-/* Alternate sections */
-.section-alt {
-    background: rgba(255, 255, 255, 0.12);
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-/* Content cards */
-.education-card,
-.experience-content,
-.project-card,
-.skill-card,
-.activity-card {
-    background: rgba(255, 255, 255, 0.30);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    box-shadow: 0 8px 25px rgba(24, 41, 60, 0.05);
-}
-
-/* Links */
-a {
-    color: #1684F8;
-}
-
-/* Buttons */
-button,
-.btn,
-.btn-primary {
-    background: rgba(255, 255, 255, 0.22);
-    border: 1px solid rgba(255, 255, 255, 0.55);
-    color: #1684F8;
-}
-
-/* Hover */
-a:hover,
-button:hover,
-.btn:hover {
-    color: #122437;
-}
-
-/* Text selection */
-::selection {
-    background: rgba(46, 143, 255, 0.25);
-    color: #18293C;
-}
-/* =========================================
-   FLOATING BACKGROUND BUBBLES
-========================================= */
-
+/* Floating glass bubbles — behind the page content, above the body background */
 .ambient {
     position: fixed;
+    display: block;
+    z-index: -1;
     border-radius: 50%;
     pointer-events: none;
-    z-index: 0;
-    filter: blur(1px);
-    opacity: 0.45;
-    animation: bubbleFloat 18s ease-in-out infinite alternate;
+    opacity: 0.72;
+    filter: none;
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    box-shadow:
+        inset 10px 10px 24px rgba(255, 255, 255, 0.28),
+        inset -8px -10px 22px rgba(100, 150, 190, 0.08),
+        0 10px 30px rgba(24, 41, 60, 0.045);
+    animation: bubbleFloat 20s ease-in-out infinite alternate;
+    will-change: transform;
 }
 
 .ambient-one {
-    width: 180px;
-    height: 180px;
-    top: 12%;
-    right: 8%;
-    background: rgba(255, 255, 255, 0.28);
-    animation-duration: 20s;
+    width: 145px;
+    height: 145px;
+    top: 13%;
+    right: 7%;
+    background: radial-gradient(
+        circle at 32% 28%,
+        rgba(255, 255, 255, 0.55),
+        rgba(255, 255, 255, 0.12) 58%,
+        rgba(174, 255, 251, 0.16)
+    );
+    animation-duration: 21s;
 }
 
 .ambient-two {
-    width: 250px;
-    height: 250px;
-    bottom: 8%;
+    width: 205px;
+    height: 205px;
+    bottom: 9%;
     left: 5%;
-    background: rgba(174, 255, 251, 0.30);
-    animation-duration: 24s;
-    animation-delay: -5s;
+    background: radial-gradient(
+        circle at 32% 28%,
+        rgba(255, 255, 255, 0.48),
+        rgba(174, 255, 251, 0.18) 60%,
+        rgba(155, 164, 255, 0.12)
+    );
+    animation-duration: 25s;
+    animation-delay: -6s;
 }
 
 .ambient-three {
-    width: 120px;
-    height: 120px;
-    top: 48%;
-    left: 42%;
-    background: rgba(155, 164, 255, 0.28);
-    animation-duration: 16s;
-    animation-delay: -3s;
+    width: 92px;
+    height: 92px;
+    top: 52%;
+    left: 43%;
+    background: radial-gradient(
+        circle at 32% 28%,
+        rgba(255, 255, 255, 0.62),
+        rgba(155, 164, 255, 0.16) 65%,
+        rgba(255, 255, 255, 0.08)
+    );
+    animation-duration: 17s;
+    animation-delay: -4s;
 }
 
 @keyframes bubbleFloat {
@@ -1252,24 +1219,402 @@ button:hover,
         transform: translate3d(0, 0, 0) scale(1);
     }
     50% {
-        transform: translate3d(35px, -45px, 0) scale(1.12);
+        transform: translate3d(28px, -34px, 0) scale(1.06);
     }
     100% {
-        transform: translate3d(-25px, 35px, 0) scale(0.92);
+        transform: translate3d(-18px, 25px, 0) scale(0.96);
     }
 }
 
-/* Keep website content above bubbles */
-.header,
-main,
-footer {
+/* Navigation glass */
+.header {
+    background: rgba(255, 255, 255, 0.20);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+    backdrop-filter: blur(14px);
+}
+
+/* Hero panel — maintain the original 1120px container and two-column layout */
+.hero {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    border-radius: 28px;
+    box-shadow: 0 12px 38px rgba(24, 41, 60, 0.045);
+    backdrop-filter: blur(8px);
+}
+
+/* Ensure hero columns can shrink without pushing text into the frame */
+.hero-content,
+.hero-visual,
+.hero-image-wrapper {
+    min-width: 0;
+}
+
+/* Hero visual compatibility for the portfolio markup */
+.hero-visual {
     position: relative;
-    z-index: 1;
+    width: 100%;
+    padding: 10px;
+}
+
+.portrait-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(24, 41, 60, 0.06);
+    backdrop-filter: blur(10px);
+}
+
+.portrait-top,
+.portrait-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portrait-top {
+    padding: 2px 3px 12px;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.portrait-placeholder {
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: linear-gradient(140deg, #C9BDF2, #D5E8F5, #B8E6DE);
+}
+
+.portrait-placeholder span {
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 85px;
+    font-weight: 800;
+    letter-spacing: -5px;
+}
+
+.portrait-bottom {
+    padding: 14px 3px 2px;
+}
+
+.portrait-bottom h3 {
+    font-size: 15px;
+}
+
+.portrait-bottom p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* Alternate sections */
+.section-alt {
+    background: rgba(255, 255, 255, 0.14);
+    border-top: 1px solid rgba(255, 255, 255, 0.28);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+/* Glass-style cards */
+.education-card,
+.experience-content,
+.project-card,
+.skill-card,
+.activity-card,
+.about-info {
+    background: rgba(255, 255, 255, 0.34);
+    border-color: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 8px 25px rgba(24, 41, 60, 0.045);
+    backdrop-filter: blur(8px);
+}
+
+/* Links and buttons */
+a {
+    color: inherit;
+}
+
+.nav-links a:hover,
+.footer a:hover {
+    color: #167FEA;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    background: #2E8FFF;
+    border-color: #2E8FFF;
+}
+
+.btn-primary:hover {
+    color: #FFFFFF;
+    background: #1877DF;
+    border-color: #1877DF;
+}
+
+.btn-outline {
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.24);
+    border-color: rgba(255, 255, 255, 0.62);
+}
+
+.btn-outline:hover {
+    color: #167FEA;
+    background: rgba(255, 255, 255, 0.42);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Tag styling */
+.tag-list span {
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.34);
+    border-color: rgba(255, 255, 255, 0.48);
+}
+
+/* Keep contact section readable against the pastel page */
+.contact-section {
+    background: rgba(24, 41, 60, 0.94);
+}
+
+/* Hero responsive layout */
+@media (max-width: 950px) {
+    .hero {
+        gap: 35px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
+@media (max-width: 720px) {
+    .hero {
+        width: calc(100% - 32px);
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 38px;
+        margin-top: 16px;
+        padding: 45px 28px;
+        border-radius: 22px;
+    }
+
+    .hero-visual {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .portrait-placeholder {
+        min-height: 230px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero {
+        padding: 34px 22px;
+    }
 }
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     .ambient {
-        animation: none;
+        animation: none !important;
+    }
+}
+
+
+
+/* =====================================================
+   PORTFOLIO MARKUP COMPATIBILITY
+   Supports the class names used in index.html
+===================================================== */
+
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 12px;
+    margin-bottom: 25px;
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #2E8FFF;
+    box-shadow: 0 0 0 4px rgba(46, 143, 255, 0.12);
+}
+
+.eyebrow {
+    color: #267FE0;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    color: var(--primary);
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.16;
+    letter-spacing: -2px;
+    overflow-wrap: anywhere;
+    margin-bottom: 18px;
+}
+
+.hero h1 span,
+.section-heading h2 span {
+    color: #267FE0;
+}
+
+.hero-description {
+    max-width: 610px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 27px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 21px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.button-primary {
+    color: #FFFFFF;
+    background: #2E8FFF;
+    border: 1px solid #2E8FFF;
+}
+
+.button-primary:hover {
+    color: #FFFFFF;
+    background: #1877DF;
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+}
+
+.button-secondary:hover {
+    color: #167FEA;
+    background: rgba(255, 255, 255, 0.48);
+    transform: translateY(-2px);
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.meta-divider {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #2E8FFF;
+}
+
+/* About section class names in index.html */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.about-main {
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    border-radius: 12px;
+}
+
+.about-main p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.95;
+    margin-bottom: 15px;
+}
+
+.about-main p:last-child {
+    margin-bottom: 0;
+}
+
+.about-highlight {
+    padding: 25px;
+    color: #FFFFFF;
+    background: rgba(24, 41, 60, 0.90);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlight-item {
+    padding: 12px 0;
+}
+
+.highlight-number {
+    display: block;
+    color: #BDF7E8;
+    font-family: var(--font-heading);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.highlight-item p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.highlight-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.section-soft {
+    background: rgba(255, 255, 255, 0.14);
+    border-top: 1px solid rgba(255, 255, 255, 0.28);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+@media (max-width: 720px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 9vw, 46px);
     }
 }
