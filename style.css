@@ -1290,3 +1290,166 @@ body {
         padding-right: 24px;
     }
 }
+
+/* =========================================
+   STRONGER COLOURED PORTFOLIO THEME
+   Dusty Blue + Lavender + Teal
+========================================= */
+
+:root {
+    --primary: #20364D;
+    --primary-dark: #172B40;
+    --accent: #286F73;
+    --accent-light: #D0E5E1;
+
+    --background: #C5D4E4;
+    --background-alt: #B7C9DD;
+    --surface: #E1E8F0;
+
+    --text: #25394D;
+    --muted: #52677C;
+    --border: rgba(32, 54, 77, 0.16);
+
+    --shadow: 0 10px 30px rgba(32, 54, 77, 0.12);
+}
+
+/* Entire page background */
+body {
+    background:
+        radial-gradient(
+            ellipse at 5% 5%,
+            #C8C2DF 0%,
+            transparent 38%
+        ),
+        radial-gradient(
+            ellipse at 95% 25%,
+            #A9CCC7 0%,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #C5D4E4 0%,
+            #B8CBE0 48%,
+            #C8D8D8 100%
+        );
+
+    background-attachment: fixed;
+}
+
+/* Navigation */
+.header {
+    background: rgba(190, 207, 225, 0.94);
+    border-bottom: 1px solid rgba(32, 54, 77, 0.16);
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(
+        125deg,
+        #D5D5E8,
+        #C2D5E3 55%,
+        #B8D8D0
+    );
+
+    border: 1px solid rgba(255,255,255,0.55);
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(32,54,77,0.12);
+}
+
+/* Alternate sections */
+.section-alt {
+    background: linear-gradient(
+        120deg,
+        #B8C8DE,
+        #C5C4DD 55%,
+        #B5D1CE
+    );
+
+    border-top: 1px solid rgba(255,255,255,0.35);
+    border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+
+/* Cards */
+.education-card,
+.experience-content,
+.project-card,
+.skill-card,
+.activity-card,
+.about-info {
+    background: rgba(230, 237, 244, 0.82);
+    border: 1px solid rgba(255,255,255,0.65);
+    box-shadow: 0 8px 24px rgba(32,54,77,0.09);
+}
+
+/* Project cards */
+.project-card {
+    background: linear-gradient(
+        145deg,
+        #E2E5F0,
+        #D2E2E8
+    );
+}
+
+/* Skills and interest tags */
+.tag-list span,
+.interest-list span {
+    background: #CBDCE6;
+    border: 1px solid rgba(32,54,77,0.10);
+    color: #20364D;
+}
+
+/* Icons */
+.info-icon,
+.skill-heading > i,
+.activity-card > i {
+    background: #C4DDD8;
+    color: #286F73;
+}
+
+/* Hero photo decoration */
+.image-decoration {
+    border-color: #286F73;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #203F58;
+    border-color: #203F58;
+}
+
+.btn-primary:hover {
+    background: #286F73;
+    border-color: #286F73;
+}
+
+/* Contact */
+.contact-section {
+    background: linear-gradient(
+        120deg,
+        #1B344D,
+        #28566A,
+        #347B78
+    );
+}
+
+/* Footer */
+.footer {
+    background: #172B40;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+    body {
+        background: linear-gradient(
+            145deg,
+            #C5D4E4,
+            #C6C2DF,
+            #A9CCC7
+        );
+        background-attachment: scroll;
+    }
+
+    .header {
+        background: #C5D4E4;
+    }
+}
