@@ -1453,3 +1453,211 @@ body {
         background: #C5D4E4;
     }
 }
+/* =========================================
+   DARK ACADEMIC PORTFOLIO THEME
+   ========================================= */
+
+:root {
+    --bg-main: #101722;
+    --bg-secondary: #151f2d;
+    --bg-card: #1b2939;
+    --bg-card-hover: #223449;
+
+    --text-main: #e8edf4;
+    --text-secondary: #aab8c8;
+    --text-muted: #8293a7;
+
+    --accent: #69a9d8;
+    --accent-hover: #8bc4ec;
+    --border: #2b3c50;
+}
+
+/* Overall page */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-main) !important;
+    color: var(--text-main) !important;
+}
+
+/* Navigation */
+.header {
+    background: rgba(16, 23, 34, 0.96) !important;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.header a {
+    color: var(--text-secondary);
+}
+
+.header a:hover {
+    color: var(--accent);
+}
+
+/* Hero section */
+.hero {
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(64, 112, 155, 0.20),
+            transparent 35%
+        ),
+        var(--bg-main) !important;
+    color: var(--text-main);
+}
+
+.hero h1,
+.hero h2,
+.hero h3 {
+    color: var(--text-main);
+}
+
+.hero p {
+    color: var(--text-secondary);
+}
+
+/* All sections */
+section {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+.section-alt {
+    background: var(--bg-secondary) !important;
+}
+
+section h2,
+section h3 {
+    color: var(--text-main);
+}
+
+section p {
+    color: var(--text-secondary);
+}
+
+/* Cards */
+.education-card,
+.experience-content,
+.project-card,
+.skill-card,
+.activity-card,
+.about-info {
+    background: var(--bg-card) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    transition: 0.25s ease;
+}
+
+.education-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.activity-card:hover {
+    background: var(--bg-card-hover) !important;
+    transform: translateY(-4px);
+    border-color: #45617e;
+}
+
+/* Card headings and descriptions */
+.education-card h3,
+.experience-content h3,
+.project-card h3,
+.skill-card h3,
+.activity-card h3 {
+    color: var(--text-main);
+}
+
+.education-card p,
+.experience-content p,
+.project-card p,
+.skill-card p,
+.activity-card p {
+    color: var(--text-secondary);
+}
+
+/* Tags */
+.tag-list span,
+.interest-list span {
+    background: #26394d !important;
+    color: #c4d9ed !important;
+    border: 1px solid #354d65;
+}
+
+/* Icons */
+.info-icon,
+.skill-heading > i,
+.activity-card > i {
+    color: var(--accent) !important;
+}
+
+/* Decorative elements */
+.image-decoration {
+    background: #263e55 !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--accent) !important;
+    color: #101722 !important;
+    border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover) !important;
+}
+
+/* Contact section */
+.contact-section {
+    background: #172638 !important;
+    color: var(--text-main);
+}
+
+.contact-section h2,
+.contact-section h3 {
+    color: var(--text-main);
+}
+
+.contact-section p {
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.footer {
+    background: #0b111a !important;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+}
+
+/* Links */
+a {
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* Text selection */
+::selection {
+    background: #477da8;
+    color: white;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero {
+        background: var(--bg-main) !important;
+    }
+
+    .education-card,
+    .experience-content,
+    .project-card,
+    .skill-card,
+    .activity-card {
+        border-radius: 10px;
+    }
+}
