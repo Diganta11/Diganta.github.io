@@ -1103,27 +1103,27 @@ h1, h2, h3, h4 {
     }
 
 }
-
 /* =========================================
-   NEW VISUAL THEME
-   Soft Blue / Lavender / Teal
+   FINAL VISUAL THEME
+   Blue / Navy / Lavender / Cyan
+   Inspired by Biplab Pati's colour palette
 ========================================= */
 
 :root {
-    --primary: #243B53;
-    --primary-dark: #172B40;
-    --accent: #397F83;
-    --accent-light: #E2EFED;
+    --primary: #18293C;
+    --primary-dark: #122437;
+    --accent: #2E8FFF;
+    --accent-light: #E8F2FF;
 
-    --background: #EAF0F5;
-    --background-alt: #DFE8F0;
-    --surface: #F7F9FB;
+    --background: #FFFFFF;
+    --background-alt: #F5F7FA;
+    --surface: #FFFFFF;
 
-    --text: #26394B;
-    --muted: #607386;
-    --border: rgba(36, 59, 83, 0.12);
+    --text: #18293C;
+    --muted: #657586;
+    --border: rgba(24, 41, 60, 0.12);
 
-    --shadow: 0 8px 28px rgba(36, 59, 83, 0.08);
+    --shadow: 0 8px 30px rgba(24, 41, 60, 0.08);
 }
 
 /* Main page background */
@@ -1131,19 +1131,19 @@ body {
     background:
         radial-gradient(
             circle at 8% 5%,
-            rgba(194, 194, 224, 0.42),
-            transparent 30%
+            rgba(155, 164, 255, 0.20),
+            transparent 32%
         ),
         radial-gradient(
             circle at 95% 25%,
-            rgba(175, 214, 208, 0.40),
-            transparent 32%
+            rgba(174, 255, 251, 0.22),
+            transparent 35%
         ),
         linear-gradient(
             135deg,
-            #EAF0F5 0%,
-            #E4EBF2 50%,
-            #E9F0EE 100%
+            #FFFFFF 0%,
+            #F5F7FA 55%,
+            #F0FAFA 100%
         );
 
     background-attachment: fixed;
@@ -1151,31 +1151,27 @@ body {
 
 /* Navigation */
 .header {
-    background: rgba(234, 240, 245, 0.88);
-    border-bottom: 1px solid rgba(36, 59, 83, 0.12);
+    background: rgba(255, 255, 255, 0.90);
+    border-bottom: 1px solid var(--border);
 }
 
-/* Hero section */
+/* Hero background */
 .hero {
     background: linear-gradient(
         125deg,
-        rgba(255, 255, 255, 0.62),
-        rgba(222, 233, 241, 0.55)
+        rgba(232, 242, 255, 0.75),
+        rgba(174, 255, 251, 0.18)
     );
 
-    border: 1px solid rgba(255, 255, 255, 0.75);
-    border-radius: 12px;
+    border-color: rgba(46, 143, 255, 0.12);
     box-shadow: var(--shadow);
-    margin-top: 28px;
-    padding-left: 45px;
-    padding-right: 45px;
 }
 
 /* Alternate sections */
 .section-alt {
-    background: rgba(210, 223, 235, 0.55);
-    border-top: 1px solid rgba(255,255,255,0.45);
-    border-bottom: 1px solid rgba(255,255,255,0.45);
+    background: rgba(232, 242, 255, 0.42);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 /* Cards */
@@ -1183,5 +1179,34 @@ body {
 .experience-content,
 .project-card,
 .skill-card,
-.activity-card,
-.about
+.activity-card {
+    background: var(--surface);
+    border-color: var(--border);
+    box-shadow: var(--shadow);
+}
+
+/* Links and highlighted text */
+a {
+    color: var(--accent);
+}
+
+/* Buttons */
+button,
+.btn,
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* Hover effects */
+a:hover,
+button:hover,
+.btn:hover {
+    color: var(--primary-dark);
+}
+
+/* Selection colour */
+::selection {
+    background: rgba(46, 143, 255, 0.20);
+    color: var(--primary-dark);
+}
