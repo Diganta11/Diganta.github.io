@@ -1620,7 +1620,7 @@ a {
 }
 
 /* =====================================================
-   SOFT BLURRED FLOATING BUBBLES
+   SOFT, MORE VISIBLE FLOATING BUBBLES
 ===================================================== */
 
 body {
@@ -1637,93 +1637,96 @@ body::before,
 body::after {
     content: "";
     position: fixed;
-    inset: -25px;
+    inset: -35px;
     display: block;
     pointer-events: none;
     background-repeat: no-repeat;
     will-change: transform;
-    filter: blur(9px);
 }
 
-/* Larger, softly blurred bubbles */
+/* Larger pastel bubbles: visibly coloured, but still softly blurred */
 body::before {
     z-index: 0;
-    opacity: 0.78;
+    opacity: 0.92;
+    filter: blur(5px);
     background-image:
         radial-gradient(circle,
-            rgba(255, 255, 255, 0.38) 0%,
-            rgba(255, 255, 255, 0.23) 42%,
-            rgba(255, 255, 255, 0.08) 68%,
+            rgba(255, 255, 255, 0.62) 0%,
+            rgba(255, 255, 255, 0.38) 38%,
+            rgba(255, 255, 255, 0.12) 66%,
             transparent 76%),
         radial-gradient(circle,
-            rgba(174, 255, 251, 0.34) 0%,
-            rgba(174, 255, 251, 0.20) 45%,
-            rgba(255, 255, 255, 0.07) 70%,
+            rgba(104, 220, 230, 0.48) 0%,
+            rgba(145, 235, 231, 0.32) 42%,
+            rgba(145, 235, 231, 0.10) 68%,
             transparent 78%),
         radial-gradient(circle,
-            rgba(201, 189, 242, 0.34) 0%,
-            rgba(201, 189, 242, 0.18) 46%,
-            rgba(255, 255, 255, 0.06) 70%,
-            transparent 78%);
-    background-size:
-        180px 180px,
-        235px 235px,
-        125px 125px;
-    background-position:
-        86% 16%,
-        7% 83%,
-        46% 54%;
-    animation: bubblesLayerOne 24s ease-in-out infinite alternate;
-}
-
-/* Smaller, softer bubbles for depth */
-body::after {
-    z-index: 0;
-    opacity: 0.68;
-    filter: blur(7px);
-    background-image:
+            rgba(157, 145, 230, 0.48) 0%,
+            rgba(184, 176, 239, 0.30) 44%,
+            rgba(184, 176, 239, 0.09) 69%,
+            transparent 79%),
         radial-gradient(circle,
-            rgba(255, 255, 255, 0.34) 0%,
-            rgba(255, 255, 255, 0.17) 48%,
-            transparent 76%),
-        radial-gradient(circle,
-            rgba(174, 255, 251, 0.30) 0%,
-            rgba(174, 255, 251, 0.14) 48%,
-            transparent 76%),
-        radial-gradient(circle,
-            rgba(255, 255, 255, 0.28) 0%,
-            rgba(255, 255, 255, 0.12) 48%,
+            rgba(139, 197, 255, 0.42) 0%,
+            rgba(166, 213, 255, 0.25) 45%,
             transparent 76%);
     background-size:
-        78px 78px,
-        112px 112px,
-        58px 58px;
+        205px 205px,
+        245px 245px,
+        175px 175px,
+        145px 145px;
     background-position:
-        72% 72%,
-        28% 22%,
-        94% 48%;
-    animation: bubblesLayerTwo 19s ease-in-out infinite alternate;
+        84% 15%,
+        8% 82%,
+        47% 52%,
+        92% 76%;
+    animation: bubblesLayerOne 21s ease-in-out infinite alternate;
+}
+
+/* Smaller bubbles add depth without creating sharp glass-like rings */
+body::after {
+    z-index: 0;
+    opacity: 0.84;
+    filter: blur(4px);
+    background-image:
+        radial-gradient(circle,
+            rgba(255, 255, 255, 0.58) 0%,
+            rgba(255, 255, 255, 0.28) 46%,
+            transparent 76%),
+        radial-gradient(circle,
+            rgba(120, 221, 216, 0.42) 0%,
+            rgba(120, 221, 216, 0.20) 48%,
+            transparent 76%),
+        radial-gradient(circle,
+            rgba(165, 151, 235, 0.42) 0%,
+            rgba(165, 151, 235, 0.20) 48%,
+            transparent 76%),
+        radial-gradient(circle,
+            rgba(126, 190, 255, 0.38) 0%,
+            rgba(126, 190, 255, 0.17) 48%,
+            transparent 76%);
+    background-size:
+        88px 88px,
+        118px 118px,
+        72px 72px,
+        96px 96px;
+    background-position:
+        72% 70%,
+        27% 22%,
+        94% 47%,
+        12% 43%;
+    animation: bubblesLayerTwo 17s ease-in-out infinite alternate;
 }
 
 @keyframes bubblesLayerOne {
-    from {
-        transform: translate3d(0, 0, 0);
-    }
-    to {
-        transform: translate3d(-24px, -30px, 0);
-    }
+    from { transform: translate3d(-12px, -16px, 0); }
+    to   { transform: translate3d(18px, 22px, 0); }
 }
 
 @keyframes bubblesLayerTwo {
-    from {
-        transform: translate3d(0, 0, 0);
-    }
-    to {
-        transform: translate3d(25px, 30px, 0);
-    }
+    from { transform: translate3d(16px, 12px, 0); }
+    to   { transform: translate3d(-20px, -18px, 0); }
 }
 
-/* Keep the actual website content above the bubbles */
 body > .header,
 body > main,
 body > footer {
